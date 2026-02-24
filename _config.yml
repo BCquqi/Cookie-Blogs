@@ -14,22 +14,22 @@ timezone: Asia/Shanghai
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Coookie # the main title
+title: 曲奇的博客 # the main title
 
-tagline: 曲奇的博客 # it will display as the subtitle
+tagline: Code every stars. Keep counting stars. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  ButterCoookie's personal blog. 
+  ButterCookie's personal blog. 
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://stellarvein.github.io"
 
 github:
-  username: ButterCoookie # change to your GitHub username
+  username: BCquqi # change to your GitHub username
 
 twitter:
-  username: ButterCoookie # change to your Twitter username
+  username: ButterCookie # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -38,8 +38,8 @@ social:
   email: JackyHuang_SES@outlook.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://buttercoookie.github.io # change to your Twitter homepage
-    - https://github.com/ButterCoookie # change to your GitHub homepage
+    - https://bcquqi.github.io # change to your Twitter homepage
+    - https://github.com/BCquqi # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -119,7 +119,7 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: ButterCoookie/Coookie-Blogs
+    repo: BCquqi/Coookie-Blogs
     repo_id: R_kgDORPNfCw
     category: Comments
     category_id: DIC_kwDORPNfC84C2VZi
