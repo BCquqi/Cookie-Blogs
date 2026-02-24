@@ -2,7 +2,7 @@
 title: 树和图的基本概念
 date: 2026-02-08 11:42:45 +0800
 categories: [graph,concept]
-tags: [C++,tree]
+tags: [C++,tree,graph]
 description: 介绍树和图的基本概念
 toc: true
 comments: true
