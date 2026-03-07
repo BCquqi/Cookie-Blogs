@@ -2,8 +2,8 @@
 title: Writing a New Post
 author: cotes
 date: 2000-01-01 00:00:00 +0800
-categories: [Blogging, Tutorial]
-tags: [writing]
+categories: [Official]
+tags: []
 render_with_liquid: false
 ---
 
