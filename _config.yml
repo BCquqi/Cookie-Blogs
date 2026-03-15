@@ -98,11 +98,11 @@ theme_mode: # [light | dark]
 cdn: https://cdn.coookie.dpdns.org
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://cn.cravatar.com/avatar/496d7ddd7e0461162d7f42f85f917881?s=400&r=G&d=mp&ver=1771984686
+avatar: ./BCquqi.png/
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: https://cn.cravatar.com/avatar/496d7ddd7e0461162d7f42f85f917881?s=400&r=G&d=mp&ver=1771984686 # string, local or CORS resources
+social_preview_image: https://cn.cravatar.com/avatar/496d7ddd7e0461162d7f42f85f917881?s=400&r=G&d=mp # string, local or CORS resources
 
 # boolean type, the global switch for TOC in posts.
 toc: true
