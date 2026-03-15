@@ -2,7 +2,7 @@
 title: 题解：P15647 [ICPC 2022 Tehran R] Magic with Cards
 date: 2026-03-09 16:54:13 +0800
 categories: [solution,Luogu]
-tags: [C++,BFS]
+tags: [BFS]
 description: 题解：P15647 [ICPC 2022 Tehran R] Magic with Cards
 toc: true
 comments: true

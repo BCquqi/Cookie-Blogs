@@ -1,8 +1,8 @@
 ---
 title: 经典算法梳理
 date: 2025-11-09 11:42:45 +0800
-categories: [algorithm,concept]
-tags: [C++]
+categories: [algorithm]
+tags: []
 description: 经典算法的全面梳理
 toc: true
 comments: true
