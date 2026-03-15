@@ -1,8 +1,8 @@
 ---
 title: ABC207C Many Segments
 date: 2026-02-06 10:57:44 +0800
-categories: [solution]
-tags: [AtCoder,C++,math]
+categories: [solution,AtCoder]
+tags: [C++,math]
 description: ABC207C Many Segments 题解
 toc: true
 comments: true

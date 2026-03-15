@@ -2,7 +2,7 @@
 title: 洛谷，火钳刘明。 
 date: 2026-02-23 21:59:34 +0800
 categories: [just for fun]
-tags: [luogu,gugu]
+tags: [gugu]
 description: 你谷群星闪耀时
 toc: true
 comments: true

@@ -2,7 +2,7 @@
 title: CookieOI[2026.01] Div.1 题解
 date: 2026-02-26 20:05:00 +0800
 categories: [solution,CookieOI]
-tags: [C++,模拟]
+tags: [C++,simulating]
 description: CookieOI[2026.01] Div.1 题解
 toc: true
 comments: true
