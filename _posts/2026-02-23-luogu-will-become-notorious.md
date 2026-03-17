@@ -17,7 +17,8 @@ mermaid: true
 ## 工单
 
 ### 管理员: 请输入文本
-[hack5篇题解，建议添加管理员提示](https://www.luogu.com.cn/ticket/BKRV754816) - 不解释了，往下看看就会发现大型管理甩锅现场
+[hack5篇题解，建议添加管理员提示](https://www.luogu.com.cn/ticket/BKRV754816) - 不解释了，往下看看就会发现大型管理甩锅现场\
+[对洛谷的改进建议（千字长文，恳请耐心阅读）](https://www.luogu.com.cn/ticket/FFKV307343) - 管理毫不客气
 
 ### 我没作弊！
 [1](https://www.luogu.com.cn/ticket/YQQB177026) - inteRand\
