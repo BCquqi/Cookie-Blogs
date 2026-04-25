@@ -1,5 +1,5 @@
 ---
-title: [回帖]一种基于基准值比较的优化冒泡排序算法可行性证明
+title: 回帖-一种基于基准值比较的优化冒泡排序算法可行性证明
 date: 2026-04-25 23:00:00 +0800
 categories: [algorithm,sort,solution]
 tags: [sort]
