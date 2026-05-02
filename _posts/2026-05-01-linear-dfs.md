@@ -1,6 +1,6 @@
 ---
 title: 线性深度优先搜索
-date: 2026-02-08 11:42:45 +0800
+date: 2026-05-01 16:10:00 +0800
 categories: [algorithm,DFS]
 tags: [DFS]
 description: 线性深度优先搜索基础原理
