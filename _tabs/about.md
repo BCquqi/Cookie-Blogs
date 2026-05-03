@@ -14,7 +14,7 @@ OIer曲奇，码龄7年(4年python+3年C++)。
 
 [Luogu](https://www.luogu.com.cn/user/1008766) [Codeforces](https://codeforces.com/profile/Sky_Aurora) [AtCoder](https://atcoder.jp/users/Sky_Aurora) [Hydro](https://hydro.ac/user/74747) [Libre](https://loj.ac/u/Jacky_LibreOJ)
 
-聊天/有事+QQ 3975465938 谢谢喵
+聊天/有事+QQ `3975465938` 谢谢喵
 
 准备全面复盘一遍学过的算法，写一套梳理博客。
 
