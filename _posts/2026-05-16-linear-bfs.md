@@ -1,6 +1,6 @@
 ---
 title: 线性广度优先搜索
-date: 2026-05-16 16:00:00 +0800
+date: 2026-05-16 15:00:00 +0800
 categories: [algorithm,BFS]
 tags: [BFS]
 description: 线性广度优先搜索基础原理
