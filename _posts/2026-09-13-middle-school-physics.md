@@ -1,8 +1,17 @@
-# 沪科版初中物理 公式\&规律
+---
+title: 沪科版初中物理 公式 & 规律
+date: 2026-09-13 12:00:00 +0800
+categories: [whk,physics]
+tags: [physics]
+description: 沪科版初中物理 公式 & 规律
+toc: true
+comments: true
+pin: false
+math: true
+mermaid: true
+---
 
 > 按教材目录顺序编排。
-> 
-> 
 
 ## 八年级上册
 

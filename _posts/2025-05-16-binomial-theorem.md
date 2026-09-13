@@ -1,7 +1,7 @@
 ---
 title: 二项式定理
 date: 2026-05-16 20:00:00 +0800
-categories: [algorithm,math]
+categories: [whk,math]
 tags: [math]
 description: 二项式定理的介绍与证明
 toc: true
