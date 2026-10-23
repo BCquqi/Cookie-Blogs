@@ -1,19 +1,21 @@
 ---
 title: 二项式反演
+
 date: 2026-10-23 09:00:00 +0800
 categories: [algorithm, math]
 tags: [math, combinatorics]
 description: 二项式反演原理、推导、算法竞赛套路与模板代码
+
+math: true
+mermaid: true
 toc: true
 comments: true
 pin: false
-math: true
-mermaid: true
 ---
 
 参考：[OI Wiki — 二项式定理](https://oi-wiki.org/math/combination/)。本文面向算法竞赛，保留推导与结论，去冗。
 
-## 1 背景：二项式定理回顾
+## 二项式定理回顾
 
 二项式定理描述了 $(x+y)^n$ 的展开式：
 
@@ -25,9 +27,9 @@ $$
 
 在算法竞赛中，我们常遇到形如 $\sum_{k=0}^n \binom{n}{k} f(k)$ 或 $\sum_{k=0}^n \binom{n}{k} g(n-k)$ 的求和式，这时候需要 **二项式反演** 将其转化为关于另一个变量的求和。
 
-## 2 二项式反演
+## 二项式反演
 
-### 2.1 基本形式
+### 基本形式
 
 设 $f(n), g(n)$ 为数列，有如下等价关系：
 
@@ -39,7 +41,7 @@ $$
 f(n) = \sum_{k=0}^n \binom{n}{k} g(n-k) \iff g(n) = \sum_{k=0}^n (-1)^k \binom{n}{k} f(n-k).
 $$
 
-### 2.2 推导
+### 推导
 
 以第一种形式为例，考虑生成函数方法：
 
@@ -62,7 +64,7 @@ $$
 g(n) = \sum_{k=0}^n (-1)^{n-k} \binom{n}{k} f(k).
 $$
 
-### 2.3 交换形式
+### 交换形式
 
 也可以写成：
 
@@ -70,27 +72,27 @@ $$
 g(n) = \sum_{k=0}^n (-1)^{n-k} \binom{n}{k} f(k) = \sum_{k=0}^n (-1)^k \binom{n}{k} f(n-k).
 $$
 
-### 2.4 关键性质
+### 关键性质
 
 - 反演系数为 $(-1)^{n-k}\binom{n}{k}$，呈现交替符号规律
 - 当 $n$ 较小时直接代入计算
 - 当 $n$ 较大时配合前缀和/分块优化
 
-## 3 算法竞赛常用套路
+## 算法竞赛常用套路
 
-### 3.1 判型识别
+### 判型识别
 
 题目中出现 $\sum_{k=0}^n \binom{n}{k} (\text{关于 }k\text{的项})$ 即考察二项式反演。
 
-### 3.2 典型变形
+### 典型变形
 
-#### 3.2.1 形式 A：$\sum_{k=0}^n \binom{n}{k} a_k$
+#### 形式 A：$\sum_{k=0}^n \binom{n}{k} a_k$
 
 直接反演得 $a_n = \sum_{k=0}^n (-1)^{n-k} \binom{n}{k} \sum_{j=0}^k \binom{k}{j} a_j$，但这通常会导致两重循环。
 
 更常见的是：**利用性质 $\binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}$** 递推求解。
 
-### 3.2.2 形式 B：$\sum_{k=0}^n \binom{n}{k} (-1)^k$
+#### 形式 B：$\sum_{k=0}^n \binom{n}{k} (-1)^k$
 
 这是一个确定值：$\sum_{k=0}^n \binom{n}{k} (-1)^k = (1-1)^n = [n=0]$。
 
@@ -98,13 +100,13 @@ $$
 
 利用斯廷宁数或前面的反演公式展开。
 
-### 3. 常见题目套路
+### 常见题目套路
 
 - **差分**: 已知 $f(n)=\sum_{k=0}^n \binom{n}{k} g(k)$，求 $g(n)$
 - **求和**: 已知 $g(n)$，求 $f(n)=\sum_{k=0}^n \binom{n}{k} g(k)$ 的闭式
 - **组合恒等式**: 证明两个求和式相等
 
-## 4 模板代码
+## 模板代码
 
 ```cpp
 #include <bits/stdc++.h>
@@ -140,7 +142,7 @@ void binomial_inversion(int n) {
 // 答案：g(n) = 1 (常数序列)
 ```
 
-## 5 典型例题
+## 典型例题
 
 ### 例1：[Luogu P1151](https://www.luogu.com.cn/problem/P1151)
 求 $\sum_{k=0}^n \binom{n}{k} k$ 的值。
@@ -157,7 +159,7 @@ void binomial_inversion(int n) {
 
 **解**：考虑 $(1+1)^n = \sum_{k=0}^n \binom{n}{k} 1^{n-k} 1^k = \sum_{k=0}^n \binom{n}{k}$，所以 $\sum_{k=0}^n \binom{n}{k} = 2^n$。
 
-## 6 总结
+## 总结
 
 二项式反演是处理含有组合系数求和式的有力工具。其核心公式为：
 

@@ -14,7 +14,9 @@ mermaid: true
 ## 前言
 本文仅为经典算法的展示，有模板的直接上代码加注释，没有模板的会简要梳理思想。\
 目前更新到大约CSP-J难度，持续更新中。
-## 约瑟夫 - 转圈循环
+
+## 排序
+### 约瑟夫 - 转圈循环
 ```cpp
 bool flag[1005]; // 是否被淘汰
 
@@ -32,8 +34,10 @@ for (int i = 1;i <= n;i++) { // 枚举每轮（因为淘汰n个人，所以循�
     flag[id] = true; // 标记被淘汰
 }
 ```
+
 ## 前缀和与差分
 前缀和数组`sum[i]`代表了`a[1] + a[2] + a[3] + ... + a[i]`，差分数组`diff[i]`则代表`a[i] - a[i - 1]`，差分与前缀和互为逆运算。
+
 ### 前缀和
 ```cpp
 sum[0] = 0;
@@ -49,6 +53,7 @@ for (int i = 1;i <= q;i++) {
     cout << sum[r] - sum[l - 1] << endl; // 前缀和查询，需要注意左端点要减一，可以自行推出
 }
 ```
+
 ### 差分
 ```cpp
 for (int i = 1;i <= n;i++) {
@@ -66,8 +71,9 @@ for (int i = 1;i <= n;i++) {
 }
 cout << endl;
 ```
-### 1.1 dfs - 深度优先搜索
-#### 1.1.1 一维
+
+### dfs - 深度优先搜索
+#### 一维
 ```cpp
 void dfs(int step) {
 	if (step > n) { // 当完成了所有决策后
@@ -82,7 +88,8 @@ void dfs(int step) {
 	}
 }
 ```
-#### 1.1.2 二维 - 连通块
+
+#### 二维 - 连通块
 ```cpp
 char a[25][25]; // 地图
 int dx[] = {-1,1,0,0},dy[] = {0,0,-1,1}; // 方向移动点枚举（简化代码用）
@@ -110,72 +117,10 @@ for (int i = 1;i <= n;i++)
     }
 dfs(tmpx,tmpy);
 ```
-## 1.2 bfs - 广度优先搜索
-#### 1.2.1 一维
-```cpp
-void bfs() {
-	queue<int> q; // 定义任务队列
-	q.push(a); // 添加起点
-	dis[a] = 0; // dis数组标记
-	vis[a] = true; // vis数组标记
-	while (q.size()) { // q没有清空
-		int now = q.front(); q.pop();
-		if (now == b) return ; // 得到目标值
-        // 根据题目内容分类讨论，本题的含义是数值从a开始向上或向下k[now]步最终获得b
-		int nxt1 = now + k[now]; // 计算下一个可能到达的地点
-		if (1 <= nxt1 && nxt1 <= n && !vis[nxt1]) {
-			dis[nxt1] = dis[now] + 1; // 更新dis数组
-			vis[nxt1] = true; // 更新vis数组
-			q.push(nxt1); // 添加queue任务
-		}
-		int nxt2 = now - k[now]; // 同理
-		if (1 <= nxt2 && nxt2 <= n && !vis[nxt2]) {
-			dis[nxt2] = dis[now] + 1;
-			vis[nxt2] = true;
-			q.push(nxt2);
-		}
-	}
-}
-```
-#### 1.2.2 二维 - 最短路
-```cpp
-char a[55][55]; // 地图
-int dis[55][55];
-bool vis[55][55];
-int sx,sy,ex,ey; // 记录起点和终点坐标
-int dx[] = {-1,1,0,0},dy[] = {0,0,-1,1};
-int n,m;
 
-struct Node {
-	int x,y;
-}; // 记录一个坐标点
-
-void bfs() {
-	queue<Node> q; // bfs的坐标点队列
-	q.push({sx,sy}); // bfs起点入队初始化
-	dis[sx][sy] = 0;
-	vis[sx][sy] = true;
-	while (q.size()) { // 任务队列非空
-		int x = q.front().x,y = q.front().y; q.pop(); // 取出队首坐标
-		if (x == ex && y == ey) return ; // 到达终点，结束搜索
-		for (int i = 0;i < 4;i++) { // 遍历四个方向
-			int nx = x + dx[i],ny = y + dy[i]; // 更新坐标
-			if (nx < 1 || nx > n || ny < 1 || ny > m) continue; // 越界
-			if (a[nx][ny] == '0') continue; // 障碍物
-			if (vis[nx][ny]) continue; // 已经访问过
-			q.push({nx,ny}); // 新坐标加入队列
-			vis[nx][ny] = true; // 标记访问过
-			dis[nx][ny] = dis[x][y] + 1; // 多走了一步，距离更新
-		}
-	}
-}
-
-bfs();
-if (vis[ex][ey]) cout << dis[ex][ey] << endl;
-else cout << -1 << endl;
-```
 ## 贪心
 朴素贪心没有标准代码，其思路是**每步选取当前最优解**；当然，不是所有题目都可以使用贪心算法。使用贪心算法要保证的一条重要性质是**无后效性**。
+
 ### 区间选点问题
 ```cpp
 struct Node {
@@ -189,6 +134,7 @@ int ans = 1,pik = 1; // ans记录区间选择个数，pik记录上一个选择�
 for (int i = 2;i <= n;i++)
     if (s[i].b > s[pik].e) ans++,pik = i; // 如果区间与前面的区间没有重叠部分，那么就要加一个点（有重叠部分这里默认的思路是将点设置在有重叠部分中间）
 ```
+
 ### 区间覆盖问题
 ```cpp
 struct Node {
@@ -211,6 +157,7 @@ for (int i = 1;i <= n;i++) {
 if (s < t) cout << "impossible" << endl;
 else cout << ans << endl;
 ```
+
 ## 快速幂
 ```cpp
 typedef long long LL;
@@ -226,6 +173,7 @@ LL qpow(LL a,LL b,LL p)
 	return ans;
 }
 ```
+
 ## 高精度（可自行封装）
 ```cpp
 void s2BIG (string s,int a[]) // 将输入的字符串倒序存入数组（倒序计算进位方便），特别地，a[0]记录数的长度
@@ -327,11 +275,13 @@ void divBIG(int a[],int b,int c[]) // 相除（以）（高精除（以）单精
 	c[0] = cl;
 }
 ```
-## 3 二分查找
+
+## 二分查找
 二分查找是一种`#include<algorithm>`中自带的算法：\
 `int pos = lower_bound(a + 1,a + n + 1,b) - a;` 代表找出数组a中第一个 >= b的元素位置；\
 `int pos = upper_bound(a + 1,a + n + 1,b) - a;` 代表找出数组a中第一个 > b的元素位置。
-## 4 二分答案
+
+## 二分答案
 ```cpp
 int l[100005],n,k;
 
@@ -348,8 +298,10 @@ while (L <= R) // 区间缩小最后剩下的一个ans就是最终答案
     else R = mid - 1; // 否则取左半段
 }
 ```
+
 ## 动态规划dp
 后续会出文章专门讲解dp，敬请期待！
+
 ## 分治法（ex快速排序&归并排序）
 ```cpp
 void quick_sort(int a[],int l,int r) {

@@ -13,7 +13,7 @@ mermaid: true
 
 参考：[OI Wiki — 莫比乌斯反演](https://oi-wiki.org/math/number-theory/mobius/)。本文面向算法竞赛，保留推导与结论，去冗。
 
-## 1 莫比乌斯函数
+## 莫比乌斯函数
 
 定义：
 
@@ -40,7 +40,7 @@ $$
 
 常用结论：$[\gcd(i,j)=1]=\displaystyle\sum_{d\mid\gcd(i,j)}\mu(d)=\sum_d[d\mid i][d\mid j]\mu(d)$，可将互素条件转化为求和。
 
-### 1.1 求法
+### 求法
 
 单个 $n$：试除分解，复杂度 $O(\sqrt n)$：
 
@@ -79,9 +79,9 @@ vector<int> get_mu(int n) {
 }
 ```
 
-## 2 莫比乌斯反演
+## 莫比乌斯反演
 
-### 2.1 基本形式
+### 基本形式
 
 设 $f,g$ 为数论函数，则
 
@@ -100,7 +100,7 @@ $$
 
 关键步骤：交换求和次序，并利用 $\sum_{t\mid m}\mu(t)=[m=1]$。
 
-### 2.2 倍数和形式
+### 倍数和形式
 
 $$
 f(n)=\sum_{n\mid d}g(d)\iff g(n)=\sum_{n\mid d}\mu\left(\frac dn\right)f(d).
@@ -108,15 +108,15 @@ $$
 
 证明与基本形式对偶。
 
-### 2.3 拓展：Dirichlet 前缀和与差分
+### 拓展：Dirichlet 前缀和与差分
 
 由 $f=1*g$ 得 $g=\mu*f$，即 $f(n)=\sum_{d\mid n}g(d)$ 为 $g$ 在 $n$ 的因数上的“前缀和”，称 **Dirichlet 前缀和**；其逆称 **Dirichlet 差分**。
 
 可在 $O(N\log\log N)$ 内预处理（与 Eratosthenes 筛遍历顺序一致）：逐个素数 $p$，将 $n$ 处的值累加到 $np$ 处（前缀和）；逆过程则累减（差分）。
 
-## 3 算法竞赛常用套路
+## 算法竞赛常用套路
 
-### 3.1 提取公因数并转化互素条件
+### 提取公因数并转化互素条件
 
 典型式子：
 
@@ -139,7 +139,7 @@ $$
 
 固定 $\ell=kd$ 再次交换求和次序，配合 $\mu$ 前缀和与**数论分块**，复杂度 $O(\sqrt N)$ 单次询问。
 
-### 3.2 lcm 转 gcd
+### lcm 转 gcd
 
 $$
 \operatorname{lcm}(i,j)=\frac{ij}{\gcd(i,j)}.
@@ -147,7 +147,7 @@ $$
 
 枚举公因数 $k$，将 $\gcd(i,j)=k$ 转化为互素问题，再按套路 1 处理。
 
-## 4 模板代码
+## 模板代码
 
 ```cpp
 #include <bits/stdc++.h>
@@ -186,7 +186,7 @@ LL calc(int n, int m) {
 }
 ```
 
-## 5 典型例题
+## 典型例题
 
 - Luogu P2522 [HAOI2011] Problem b：$\sum\sum[\gcd(i,j)=k]$，数论分块 + $\mu$ 前缀和。
 - Luogu P3312 [SDOI2014] 数表：$\sum\sum\sigma_0(ij)$，利用 $\sigma_0(ij)=\sum_{x\mid i}\sum_{y\mid j}[x\perp y]$。
