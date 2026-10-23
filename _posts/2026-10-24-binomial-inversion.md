@@ -140,7 +140,7 @@ void binomial_inversion(int n) {
 // 答案：g(n) = 1 (常数序列)
 ```
 
-## 五、典型例题
+## 5 典型例题
 
 ### 例1：[Luogu P1151](https://www.luogu.com.cn/problem/P1151)
 求 $\sum_{k=0}^n \binom{n}{k} k$ 的值。
@@ -157,7 +157,7 @@ void binomial_inversion(int n) {
 
 **解**：考虑 $(1+1)^n = \sum_{k=0}^n \binom{n}{k} 1^{n-k} 1^k = \sum_{k=0}^n \binom{n}{k}$，所以 $\sum_{k=0}^n \binom{n}{k} = 2^n$。
 
-## 六、总结
+## 6 总结
 
 二项式反演是处理含有组合系数求和式的有力工具。其核心公式为：
 

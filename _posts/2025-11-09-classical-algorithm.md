@@ -66,8 +66,8 @@ for (int i = 1;i <= n;i++) {
 }
 cout << endl;
 ```
-## dfs - 深度优先搜索
-### 一维
+### 1.1 dfs - 深度优先搜索
+#### 1.1.1 一维
 ```cpp
 void dfs(int step) {
 	if (step > n) { // 当完成了所有决策后
@@ -82,7 +82,7 @@ void dfs(int step) {
 	}
 }
 ```
-### 二维 - 连通块
+#### 1.1.2 二维 - 连通块
 ```cpp
 char a[25][25]; // 地图
 int dx[] = {-1,1,0,0},dy[] = {0,0,-1,1}; // 方向移动点枚举（简化代码用）
@@ -110,8 +110,8 @@ for (int i = 1;i <= n;i++)
     }
 dfs(tmpx,tmpy);
 ```
-## bfs - 广度优先搜索
-### 一维
+## 1.2 bfs - 广度优先搜索
+#### 1.2.1 一维
 ```cpp
 void bfs() {
 	queue<int> q; // 定义任务队列
@@ -137,7 +137,7 @@ void bfs() {
 	}
 }
 ```
-### 二维 - 最短路
+#### 1.2.2 二维 - 最短路
 ```cpp
 char a[55][55]; // 地图
 int dis[55][55];
@@ -327,11 +327,11 @@ void divBIG(int a[],int b,int c[]) // 相除（以）（高精除（以）单精
 	c[0] = cl;
 }
 ```
-## 二分查找
+## 3 二分查找
 二分查找是一种`#include<algorithm>`中自带的算法：\
 `int pos = lower_bound(a + 1,a + n + 1,b) - a;` 代表找出数组a中第一个 >= b的元素位置；\
 `int pos = upper_bound(a + 1,a + n + 1,b) - a;` 代表找出数组a中第一个 > b的元素位置。
-## 二分答案
+## 4 二分答案
 ```cpp
 int l[100005],n,k;
 

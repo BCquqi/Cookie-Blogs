@@ -13,9 +13,9 @@ mermaid: true
 
 > 按教材目录顺序编排。
 
-## 八年级上册
+### 3.1 第 9 章 测量
 
-### 第 1 章 测量
+### 3.1 第 1 章 测量
 
 1. 长度单位换算
 $1\mathrm{km}=10^3\mathrm{m},\quad 1\mathrm{m}=10\mathrm{dm}=10^2\mathrm{cm}=10^3\mathrm{mm}=10^6\mu\mathrm{m}=10^9\mathrm{nm}$
@@ -29,7 +29,7 @@ $1\mathrm{h}=60\mathrm{min}=3600\mathrm{s},\quad 1\mathrm{min}=60\mathrm{s}$
 $1\mathrm{t}=10^3\mathrm{kg},\quad 1\mathrm{kg}=10^3\mathrm{g},\quad 1\mathrm{g}=10^3\mathrm{mg}$
 质量符号：$m$；单位：$\mathrm{kg}$（千克，国际主单位）
 
-### 第 2 章 机械运动
+### 3.2 第 2 章 机械运动
 
 1. 速度定义式：$\boldsymbol{v=\dfrac{s}{t}}$
 变式：$s=vt,\quad t=\dfrac{s}{v}$
@@ -40,7 +40,7 @@ $1\mathrm{t}=10^3\mathrm{kg},\quad 1\mathrm{kg}=10^3\mathrm{g},\quad 1\mathrm{g}
 > 
 > 
 
-### 第 3 章 声现象
+### 3.4 第 3 章 声现象
 
 1. 声速常量（15℃空气中）：$\boldsymbol{v_{声}=340\mathrm{m/s}}$
 
@@ -51,7 +51,7 @@ $1\mathrm{t}=10^3\mathrm{kg},\quad 1\mathrm{kg}=10^3\mathrm{g},\quad 1\mathrm{g}
 > 
 > 
 
-### 第 4 章 光现象
+### 3.5 第 4 章 光现象
 
 #### 光学规律
 
@@ -81,7 +81,7 @@ $1\mathrm{t}=10^3\mathrm{kg},\quad 1\mathrm{kg}=10^3\mathrm{g},\quad 1\mathrm{g}
 > 
 > 
 
-### 第 5 章 力
+### 3.7 第 5 章 力
 
 力符号：$F$；单位：$\mathrm{N}$（牛顿）
 
@@ -104,9 +104,9 @@ $f$摩擦力$(\mathrm{N})$；$N$压力$(\mathrm{N})$；$\mu$动摩擦因数（�
 
 ---
 
-## 八年级下册
+## 2 八年级下册
 
-### 第 6 章 密度与压强
+### 2.6 第 6 章 密度与压强
 
 #### 密度
 
@@ -147,7 +147,7 @@ $h$：深度（液面到该点竖直距离）
 
 2. 流体压强规律：流体流速越大，压强越小。
 
-### 第 7 章 浮力
+### 2.7 第 7 章 浮力
 
 浮力符号：$F_{浮}$；单位：$\mathrm{N}$
 
@@ -243,7 +243,7 @@ $W_{总}=W_{有}+W_{额}$；$W_{有}$有用功$(\mathrm{J})$；$W_{总}$总功$(
 
 ---
 
-## 九年级上册
+## 3.9 第 10 章 内能
 
 ### 第 10 章 内能
 
@@ -329,7 +329,7 @@ $W_{有}$有用机械能$(\mathrm{J})$；$Q_{放}$燃料完全燃烧放出总热
 纯电阻电路：$Q=W=UIt=\dfrac{U^2}{R}t=Pt$
 物理量单位：$Q(\mathrm{J})$；$I(\mathrm{A})$；$R(\Omega)$；$t(\mathrm{s})$
 
-## 九年级下册
+### 3.3 第 11 章 电与磁
 
 ### 第 14 章 电与磁
 
