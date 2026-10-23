@@ -1,6 +1,6 @@
 ---
 title: 二项式反演
-date: 2026-10-24 09:00:00 +0800
+date: 2026-10-23 09:00:00 +0800
 categories: [algorithm, math]
 tags: [math, combinatorics]
 description: 二项式反演原理、推导、算法竞赛套路与模板代码
