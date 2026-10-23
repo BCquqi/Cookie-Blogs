@@ -19,7 +19,7 @@ mermaid: true
 
 **树是一种特殊的图。想要了解树和图的概念，应当先了解图的基本信息。**
 
-为了辅助理解，在介绍前强烈推荐一个常用生成图网站——[Graph Editor](https://csacademy.com/app/graph_editor/)。他的输入是大部分图论题输入数据的输入方式——一条边表示为`a b`（两个端点）。\
+为了辅助理解，在介绍前强烈推荐一个常用生成图网站——[Graph Editor](https://csacademy.com/app/graph_editor/)。他输入是大部分图论题输入数据的输入方式——一条边表示为`a b`（两个端点）。\
 示例：\
 ![生成图示例](/tree-and-graph/1.png)
 
